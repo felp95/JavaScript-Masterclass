@@ -44,3 +44,4 @@ for (const key in book2) {
 }
 
 console.log(equal)
+
