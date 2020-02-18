@@ -1,5 +1,5 @@
 // function declaration, posso invocar a função antes de criar ela.
-//console.log(sum(1, 2));
+console.log(sum(1, 2));
 
 // arguments da acesso aos parametros que foram passados para função
 
@@ -16,14 +16,14 @@ const soma = function (a, b) {
     return a + b;
 }
 
-//console.log(soma(1, 2));
+console.log(soma(1, 2));
 
 // funções de primeira classe podem ser atribuidas a uma variavel, passadas por parametros ou serem retornadas de uma outra função.
 const subtract = function (a, b) {
     return a - b;
 };
 
-//console.log(subtract(2, 2))
+console.log(subtract(2, 2))
 
 const calculator = function (fn) {
     return function (a, b) {
@@ -39,42 +39,42 @@ const restParameters = function (...numbers) {
     return total;
 };
 
-//console.log(calculator(sum)(2, 2))
-// console.log(sum(1,2,3,4,5,6,7,8,9))
-// console.log(restParameters(1,2,3,4,5,6,7,8,9))
+console.log(calculator(sum)(2, 2))
+console.log(sum(1,2,3,4,5,6,7,8,9))
+console.log(restParameters(1,2,3,4,5,6,7,8,9))
 
 // AULA FUNCTION > THIS
 
-// const rectangle = {
-//     x: 10,
-//     y: 2,
-//     calculateArea: function () {
-//         return this.x * this.y;
-//     }
-// };
+const rectangle = {
+    x: 10,
+    y: 2,
+    calculateArea: function () {
+        return this.x * this.y;
+    }
+};
 
-//console.log(rectangle.calculateArea())
+console.log(rectangle.calculateArea())
 
 // AULA FUNCTION - CALL, APPLY AND BIND
 
-// const calculateArea = function(fn) {
-//     return fn(Math.PI * Math.pow(this.radius, 2));
-// }
+const calculateArea = function(fn) {
+    return fn(Math.PI * Math.pow(this.radius, 2));
+}
 
-// const circle = {
-//     radius: 10,
-//     calculateArea
-// }
+const circle = {
+    radius: 10,
+    calculateArea
+}
 
 // CALL 
-// console.log(calculateArea.call(circle, Math.round))
+console.log(calculateArea.call(circle, Math.round))
 
-// // APPLY tem que passar parametros dentro do array
-// console.log(calculateArea.apply(circle, [Math.round]))
+// APPLY tem que passar parametros dentro do array
+console.log(calculateArea.apply(circle, [Math.round]))
 
 // // BIND
-// const calculateAreaForCircle = calculateArea.bind(circle);
-// console.log(calculateAreaForCircle(Math.round))
+const calculateAreaForCircle = calculateArea.bind(circle);
+console.log(calculateAreaForCircle(Math.round))
 
 // AULA FUNCTION - NEW
 
