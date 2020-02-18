@@ -10,8 +10,7 @@ let columns = result[2].split(", ");
 let database = {
     tables: {
         [tableName]: {
-            columns: {
-            },
+            columns: {},
             data: []
         }
     }
@@ -19,7 +18,10 @@ let database = {
 
 for (let column of columns) {
     column = column.split(" ");
-    database.tables[tableName].columns[column[0]] = column[1];
+    let name = column[0];
+    let type = column[1];
+
+    database.tables[tableName].columns[name] = type;
 }
 
-console.log(JSON.stringify(database, null, ' '));
+console.log(JSON.stringify(database, undefined, ' '));
