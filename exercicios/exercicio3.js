@@ -29,6 +29,6 @@ let database = {
     }
 };
 
-database.createTable(command)
+database.execute(command)
 
 console.log(JSON.stringify(database, undefined, '  '))
