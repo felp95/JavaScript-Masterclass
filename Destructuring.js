@@ -2,21 +2,22 @@ const CreateLanguage = function(name, author, year, dodera) {
     this.name = name;
     this.author = author;
     this.year = year;
-    this.company = function () {
-        this.dodera = dodera
+    this.changeLanguage = function (newName) {
+        this.name = newName;
     }
 }
 
 
-const language = new CreateLanguage("C", "Dennis Ritchie", 123, "Malandro")
-console.log(language)
-const language2 = new CreateLanguage("Java", "dasdsa", 312)
-const language3 = new CreateLanguage("C#", "qeeqwe", 321312)
-const language4 = new CreateLanguage("JavaScript", "xcvxvce", 31231)
-const language5 = new CreateLanguage("Dart", "adse", 3123)
-const language6 = new CreateLanguage("Angular", "dsfsd", 312312)
+const language = new CreateLanguage("C", "Dennis Ritchie", 1955)
+const language2 = new CreateLanguage("C#", "Anders Hejlsberg", 1960)
 
-var languages = [language,language2,language3,language4,language5,language6]
+language.changeLanguage("Doidera")
+
+const {name:abobrinha} = language
+
+console.log(abobrinha)
+
+var languages = [language,language2]
 
 for (const key of languages) {
     const {name, author, year} = key;
