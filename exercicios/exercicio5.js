@@ -12,17 +12,16 @@ let database = {
 
         let regExp = /create table (\w+) \((.+)\)/
         let result = command.match(regExp);
-        let tableName = result[1];
-        let columnsSplit = result[2].split(", ");
+        let [, tableName, columns] = result;
+        columns = columns.split(", ")
 
         this.tables[tableName] = {
             columns: {},
             data: []
         }
-        for (let column of columnsSplit) {
+        for (let column of columns) {
             column = column.split(" ");
-            let name = column[0];
-            let type = column[1];
+            let [name, type] = column;
 
             this.tables[tableName].columns[name] = type
         }
@@ -54,7 +53,6 @@ let database = {
     }
 };
 
-
 try {
     database.execute(command)
     database.execute("insert into author (id, name, age) values (1, Douglas Crockford, 62)");
@@ -64,4 +62,4 @@ try {
     //console.log(error.message)
 }
 
-//console.log(JSON.stringify(database, undefined, '  '))
+console.log(JSON.stringify(database, undefined, '  '))
