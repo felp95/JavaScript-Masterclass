@@ -76,6 +76,7 @@ let database = {
 
             return selectedRow;
         });
+        
 
         return rows;
     }
