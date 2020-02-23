@@ -67,12 +67,12 @@ const circle = {
 }
 
 // CALL 
-//console.log(calculateArea.call(circle, Math.round))
+console.log(calculateArea.call(circle, Math.round))
 
 // APPLY tem que passar parametros dentro do array
-//console.log(calculateArea.apply(circle, [Math.round]))
+console.log(calculateArea.apply(circle, [Math.round]))
 
-// // BIND
+// BIND
 const calculateAreaForCircle = calculateArea.bind(circle);
 //console.log(calculateAreaForCircle(Math.round))
 
