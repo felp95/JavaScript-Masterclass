@@ -7,7 +7,6 @@ const CreateLanguage = function(name, author, year, dodera) {
     }
 }
 
-
 const language = new CreateLanguage("C", "Dennis Ritchie", 1955)
 const language2 = new CreateLanguage("C#", "Anders Hejlsberg", 1960)
 
