@@ -16,8 +16,8 @@ const javascript = {
 Object.setPrototypeOf(javascript, functionalLanguage);
 
 for (const key in scheme) {
-    console.log(key, scheme.hasOwnProperty(key))
+    console.log(key, scheme.hasOwnProperty(key));
 }
 
-console.log(scheme.paradigm)
-console.log(javascript.paradigm)
+console.log(scheme.paradigm);
+console.log(javascript.paradigm);
